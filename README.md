@@ -17,8 +17,6 @@ Add the bin directory of the created directory apache-maven-<<version>> to the P
 Confirm with mvn -v in a new shell
 ```
 
-##### [Chrome Browser - Download](https://www.google.co.uk/chrome)  
-
 ## Execution Steps
 
 #### 1. Run the Test
