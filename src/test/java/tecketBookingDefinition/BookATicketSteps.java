@@ -16,26 +16,17 @@ public class BookATicketSteps {
 	@Given("I want to open the Web browser enter websiteURL {string}")
 	public void i_want_to_open_the_web_browser_enter_website_url(String url) throws InterruptedException {
 		result = bt.openBrowser_navigate(url);
-//		if (result == "Pass") {
-//			System.out.println("Successfully opened and navigated to mailtravel");
-//		} else {
-//			System.out.println("there is an error");
-//		}
-
+	}
+	
+	@And("validate the website title")
+	public void validate_the_website_title() throws InterruptedException {
+		bt.validateTitle();
 	}
 
 	@When("search {string}")
 	public void search(String srchtxt) throws InterruptedException {
 		
 			bt.search(srchtxt);
-//			if (result == "Pass") {
-//				System.out.println("Successfully searched");
-//			} else {
-//				System.out.println("there is an error");
-//			}
-//		} catch (InterruptedException e) {
-//			System.out.println(e);
-//		}
 	}
 
 		@Then("Click MoreInfo on the first result")
