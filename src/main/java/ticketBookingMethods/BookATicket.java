@@ -14,10 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BookATicket {
@@ -49,6 +45,16 @@ public class BookATicket {
 		return result;
 	}
 
+	public void validateTitle() throws InterruptedException {
+        	String title1 = driver.getTitle();
+        	String expectTitle = "Home Page | Mail Travel";
+        	if(expectTitle.equals(title1)){
+        		log.debug("Title Verified");
+        	} else {
+        	        log.debug("Title Verification failed");
+                }       
+	}
+	
 	public void search(String srchtxt) throws InterruptedException {
 		element = driver.findElement(By.xpath("(//*[@name='searchtext'])[1]"));
 		element.sendKeys(srchtxt);
