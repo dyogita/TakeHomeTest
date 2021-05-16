@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import static org.junit.Assert.*;
+import org.testng.Assert;
 
 public class BookATicket {
 	public WebDriver driver = null;
@@ -54,7 +54,7 @@ public class BookATicket {
         	} else {
         	        log.debug("Title Verification failed");
                 }   
-		assertEquals(expectTitle, title1);
+		Assert.assertEquals(expectTitle, title1);
 	}
 	
 	public void search(String srchtxt) throws InterruptedException {
@@ -212,7 +212,7 @@ public class BookATicket {
 		} else {
 			log.debug("Payment amount is not as per selected Accomodation ");
 		}
-		assertEquals(actPrice, calculatedPrice);
+		Assert.assertEquals(actPrice, calculatedPrice);
 		
 	    driver.close();
 		driver.quit();
