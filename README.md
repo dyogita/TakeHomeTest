@@ -31,4 +31,8 @@ Confirm with mvn -v in a new shell
 * 2. Cucumber Report:
 *      'Project Dir'\target\cucumber.html
 * ![image](https://user-images.githubusercontent.com/84290935/118412969-cdda8f80-b694-11eb-81a7-77ff4a87a9ae.png)
+* 3. Verify the application.log which captures the success scenarios
+*       'Project Dir'\src\test\resources\Logs\Application.log
+* ![image](https://user-images.githubusercontent.com/84290935/118415185-d5a03100-b6a0-11eb-9976-f0e9e74830b5.png)
+
 
