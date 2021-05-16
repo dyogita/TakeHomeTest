@@ -26,4 +26,6 @@ Confirm with mvn -v in a new shell
 * Run the test using `mvn install` from Terminal
 
 #### 2. Test Result
+* The result is available with in this project. See the below git link
+* https://github.com/dyogita/TakeHomeTest/blob/Main/test-output/SparkReport%2016-May-21/test-output/SparkReport/Spark.html
 
