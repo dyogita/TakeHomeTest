@@ -3,6 +3,7 @@ Feature: Validate Book A Ticket feature
 @test
   Scenario: Open website
     Given I want to open the Web browser enter websiteURL "https://www.mailtravel.co.uk/"
+    And validate the website title
     When search "India"
     Then Click MoreInfo on the first result
     Then Make sure it displaying days Price telephoneNumber
