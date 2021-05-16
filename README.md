@@ -2,7 +2,7 @@ Mail Travel Test Automation using **Selenium**, **Cucumber**, **Maven**, **Exten
 ---
 ---
 
-## Pre-requisites - Java, Maven and Chrome browser
+## Pre-requisites - Java and Maven 
 
 ##### [Java 1.8 - Download](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 
 ```
