@@ -25,8 +25,8 @@ Confirm with mvn -v in a new shell
 
 #### 2. Test Result 
 * Note:- Reports are generated in the below paths once mvn install completes the Tests.
-* 1. Spark Report: TakeHomeTest\test-output\SparkReport dd-May-21\test-output\SparkReport\Spark.html
+* 1. Spark Report:         <Project Dir>\test-output\SparkReport dd-May-21\test-output\SparkReport\Spark.html
 * ![image](https://user-images.githubusercontent.com/84290935/118412935-a257a500-b694-11eb-8a6c-aac9ab94ef82.png)
-* 2. Cucumber Report: TakeHomeTest\target\cucumber.html
+* 2. Cucumber Report:      <Project Dir>\target\cucumber.html
 * ![image](https://user-images.githubusercontent.com/84290935/118412969-cdda8f80-b694-11eb-81a7-77ff4a87a9ae.png)
 
