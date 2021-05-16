@@ -20,7 +20,7 @@ Confirm with mvn -v in a new shell
 ## Execution Steps
 
 #### 1. Run the Test
-* cd/Navigate to the project directory where pom.xml is there.
+* Navigate to the project directory where pom.xml is there.
 * Run the test using `mvn install` from Terminal
 
 #### 2. Test Result 
