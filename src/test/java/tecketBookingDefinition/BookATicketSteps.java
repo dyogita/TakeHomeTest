@@ -20,7 +20,8 @@ public class BookATicketSteps {
 	
 	@And("validate the website title")
 	public void validate_the_website_title() throws InterruptedException {
-		bt.validateTitle();
+		String expectTitle = "Home Page | Mail Travel";
+		Assert.assertEquals(expectTitle, bt.validateTitle());
 	}
 
 	@When("search {string}")
@@ -88,10 +89,11 @@ public class BookATicketSteps {
 
 		bt.passengerForm();
 	}
-
+	
 	@Then("Verify Payment amount as per selected Accomodation")
 	public void verify_payment_amount_as_per_selected_accomodation()  throws InterruptedException {
-		bt.comp2();
+		Assert.assertTrue(bt.comp2());
+		bt.quitDriver();
 	}
 
 }
