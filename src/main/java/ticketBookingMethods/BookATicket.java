@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.Assert;
+
 
 public class BookATicket {
 	public WebDriver driver = null;
@@ -46,16 +46,10 @@ public class BookATicket {
 		return result;
 	}
 
-	public void validateTitle() throws InterruptedException {
-        	String title1 = driver.getTitle();
-        	String expectTitle = "Home Page | Mail Travel";
-        	if(expectTitle.equals(title1)){
-        		log.debug("Title Verified");
-        	} else {
-        	        log.debug("Title Verification failed");
-                }   
-		Assert.assertEquals(expectTitle, title1);
+	public String validateTitle() throws InterruptedException {
+       		return driver.getTitle();
 	}
+
 	
 	public void search(String srchtxt) throws InterruptedException {
 		element = driver.findElement(By.xpath("(//*[@name='searchtext'])[1]"));
@@ -199,23 +193,27 @@ public class BookATicket {
 
 	}
 
-	public void comp2() throws InterruptedException {
+	public boolean comp2() throws InterruptedException {
 		Thread.sleep(10000);
 		String actPrice = comp();
 
 		String calculatedPrice = driver.findElement(By.className("nbf_total"))
 				.getText();
-		
+		boolean isPriceMatched = false;
 		if (actPrice.equals(calculatedPrice)) {
 			log.debug(" Payment amount is as per selected Accomodation ");
-		
+			isPriceMatched = true;
 		} else {
 			log.debug("Payment amount is not as per selected Accomodation ");
 		}
-		Assert.assertEquals(actPrice, calculatedPrice);
 		
+		return isPriceMatched;
+	}
+
+	public void quitDriver() {
 	    driver.close();
 		driver.quit();
+		
 	}
 
 }
